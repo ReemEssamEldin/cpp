@@ -39,3 +39,12 @@
 
 # debug information files
 *.dwo
+
+# MD
+*.md
+!README.md
+
+# sh
+*.sh
+
+
