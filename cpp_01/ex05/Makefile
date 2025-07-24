@@ -1,24 +1,61 @@
-NAME = ex05
-CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = main.cpp Harl.cpp
-OBJS = $(SRCS:.cpp=.o)
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: reldahli <reldahli@student.42berlin.de>    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/07/24 14:54:11 by reldahli          #+#    #+#              #
+#    Updated: 2025/07/24 15:33:08 by reldahli         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-.RECIPEPREFIX = >
+# Standard
+NAME		= ex05
 
+# Source files
+SRCS		= main.cpp Harl.cpp
+
+# Compiler and flags
+CPP			= c++
+CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
+
+# Object files
+OBJS		= $(SRCS:.cpp=.o)
+
+# Compiler
+HEADERS		= Harl.hpp
+
+# Build rules
 all: $(NAME)
 
+# Colors for output
+GREEN	= \033[0;32m
+RED		= \033[0;31m
+YELLOW	= \033[0;33m
+RESET	= \033[0m
+
+# Target to compile the program
 $(NAME): $(OBJS)
->$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
+	@echo "$(YELLOW)Compiling $(NAME)...$(RESET)"
+	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
+	@echo "$(GREEN)Compilation successful!$(RESET)"
 
-%.o: %.cpp Harl.hpp
->$(CXX) $(CXXFLAGS) -c $< -o $@
+# Target to compile object files
+%.o: %.cpp $(HEADERS)
+	@echo "$(YELLOW)Compiling $<...$(RESET)"
+	$(CPP) $(CPPFLAGS) -c $< -o $@
 
+# Target to clean files
 clean:
->rm -f $(OBJS)
+	@echo "$(RED)Cleaning object files...$(RESET)"
+	rm -f $(OBJS)
+	@echo "$(GREEN)Object files cleaned up.$(RESET)"
 
 fclean: clean
->rm -f $(NAME)
+	@echo "$(RED)Cleaning executable...$(RESET)"
+	rm -f $(NAME)
+	@echo "$(GREEN)Executable cleaned up.$(RESET)"
 
 re: fclean all
 
