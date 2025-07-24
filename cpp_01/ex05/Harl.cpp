@@ -6,7 +6,7 @@
 /*   By: reldahli <reldahli@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 15:10:26 by reldahli          #+#    #+#             */
-/*   Updated: 2025/07/24 15:41:58 by reldahli         ###   ########.fr       */
+/*   Updated: 2025/07/24 17:39:54 by reldahli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,6 @@ void Harl::complain(std::string level)
 	};
 	int index = -1;
 
-	for (size_t i = 0; i < level.length(); ++i)
-	{
-		level[i] = toupper(level[i]);
-	}
 	for (int i = 0; i < 4; ++i)
 	{
 		if (level == levels[i])
