@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: reldahli <reldahli@student.42berlin.de>    +#+  +:+       +#+        */
+/*   By: reldahli <reldahli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 20:52:19 by reldahli          #+#    #+#             */
-/*   Updated: 2025/07/24 20:53:56 by reldahli         ###   ########.fr       */
+/*   Updated: 2025/07/25 14:38:02 by reldahli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,27 @@
 
 Fixed::Fixed() : _rawBits(0)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << BLUE << "Default constructor called" << RESET << std::endl;
 }
 
 Fixed::Fixed(const int intValue) : _rawBits(intValue << _fractionalBits)
 {
-	std::cout << "Int constructor called" << std::endl;
+	std::cout << GREEN << "Int constructor called" << RESET << std::endl;
 }
 
 Fixed::Fixed(const float floatValue) : _rawBits(roundf(floatValue * (1 << _fractionalBits)))
 {
-	std::cout << "Float constructor called" << std::endl;
+	std::cout << YELLOW << "Float constructor called" << RESET << std::endl;
 }
 
 Fixed::Fixed(const Fixed& other) : _rawBits(other._rawBits)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << CYAN << "Copy constructor called" << RESET << std::endl;
 }
 
 Fixed& Fixed::operator=(const Fixed& other)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
+	std::cout << MAGENTA << "Copy assignment operator called" << RESET << std::endl;
 	if (this != &other) {
 		this->_rawBits = other._rawBits;
 	}
@@ -43,7 +43,7 @@ Fixed& Fixed::operator=(const Fixed& other)
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << RED << "Destructor called" << RESET << std::endl;
 }
 
 int Fixed::getRawBits(void) const
