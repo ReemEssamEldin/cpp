@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: reldahli <reldahli@student.42berlin.de>    +#+  +:+       +#+         #
+#    By: reldahli <reldahli@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/25 12:02:00 by reldahli          #+#    #+#              #
-#    Updated: 2025/07/25 12:09:38 by reldahli         ###   ########.fr        #
+#    Updated: 2025/07/25 14:46:44 by reldahli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
