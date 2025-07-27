@@ -1,12 +1,12 @@
 #include "Cat.hpp"
 
 Cat::Cat() : Animal("Cat") {
-    std::cout << "Cat constructor called" << std::endl;
+    std::cout << GREEN << "Cat constructor called" << RESET << std::endl;
     _brain = new Brain();
 }
 
 Cat::Cat(const Cat& other) : Animal(other) {
-    std::cout << "Cat copy constructor called" << std::endl;
+    std::cout << GREEN << "Cat copy constructor called" << RESET << std::endl;
     _brain = new Brain(*other._brain);
 }
 
@@ -16,17 +16,17 @@ Cat& Cat::operator=(const Cat& other) {
         delete _brain;
         _brain = new Brain(*other._brain);
     }
-    std::cout << "Cat assignment operator called" << std::endl;
+    std::cout << CYAN << "Cat assignment operator called" << RESET << std::endl;
     return *this;
 }
 
 Cat::~Cat() {
-    std::cout << "Cat destructor called" << std::endl;
+    std::cout << RED << "Cat destructor called" << RESET << std::endl;
     delete _brain;
 }
 
 void Cat::makeSound() const {
-    std::cout << "Meow! Meow!" << std::endl;
+    std::cout << MAGENTA << "Meow! Meow!" << RESET << std::endl;
 }
 
 Brain* Cat::getBrain() const {

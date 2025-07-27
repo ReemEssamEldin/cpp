@@ -20,16 +20,15 @@ int main()
     delete j;
     delete i;
 
-    std::cout << "\n\nWrong Animal Test\n\n"
-              << std::endl;
+    std::cout << RED << "\n\n########  Wrong Animal Test  ########\n\n" << RESET << std::endl;
 
-    std::cout << "WrongAnimal -> WrongCat" << std::endl;
+    std::cout << BLUE << "WrongAnimal -> WrongCat" << RESET << std::endl;
     const WrongAnimal *wrongCat = new WrongCat();
     std::cout << wrongCat->getType() << "  " << std::endl;
     wrongCat->makeSound(); // WrongAnimal sound
 
-    
-    std::cout << "\n\nWrongCat -> WrongCat" << std::endl;
+
+    std::cout << BLUE << "\n\nWrongCat -> WrongCat" << RESET << std::endl;
     const WrongCat *wrongCatCat = new WrongCat();
     std::cout << wrongCatCat->getType() << "  " << std::endl;
     wrongCatCat->makeSound(); // WrongCat sound

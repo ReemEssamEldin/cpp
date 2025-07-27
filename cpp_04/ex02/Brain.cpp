@@ -1,21 +1,21 @@
 #include "Brain.hpp"
 
 Brain::Brain() {
-    std::cout << "Brain constructor called" << std::endl;
+    std::cout << GREEN << "Brain constructor called" << RESET << std::endl;
     for (int i = 0; i < 100; i++) {
         this->_ideas[i] = "Empty idea";
     }
 }
 
 Brain::Brain(const Brain& other) {
-    std::cout << "Brain copy constructor called" << std::endl;
+    std::cout << GREEN << "Brain copy constructor called" << RESET << std::endl;
     for (int i = 0; i < 100; i++) {
         this->_ideas[i] = other._ideas[i];
     }
 }
 
 Brain& Brain::operator=(const Brain& other) {
-    std::cout << "Brain assignment operator called" << std::endl;
+    std::cout << CYAN << "Brain assignment operator called" << RESET << std::endl;
     if (this != &other) {
         for (int i = 0; i < 100; i++) {
             this->_ideas[i] = other._ideas[i];
@@ -25,7 +25,7 @@ Brain& Brain::operator=(const Brain& other) {
 }
 
 Brain::~Brain() {
-    std::cout << "Brain destructor called" << std::endl;
+    std::cout << RED << "Brain destructor called" << RESET << std::endl;
 }
 
 void Brain::setIdea(int index, const std::string& idea) {

@@ -3,11 +3,11 @@
 #include "Cat.hpp"
 
 int main() {
-    std::cout << "=== Testing deep copy of Dog ===" << std::endl;
+    std::cout << BLUE << "=== Testing deep copy of Dog ===" << RESET << std::endl;
     Dog* original = new Dog();
     original->getBrain()->setIdea(0, "I am a good dog");
     original->getBrain()->setIdea(1, "I love my owner");
-    
+
     Dog* copy = new Dog(*original);
     copy->getBrain()->setIdea(0, "I am a copy");
 
@@ -19,11 +19,11 @@ int main() {
     delete original;
     delete copy;
 
-    std::cout << "\n=== Testing deep copy of Cat ===" << std::endl;
+    std::cout << BLUE << "\n=== Testing deep copy of Cat ===" << RESET << std::endl;
     Cat* originalCat = new Cat();
     originalCat->getBrain()->setIdea(0, "I am a cat");
     originalCat->getBrain()->setIdea(1, "I like fish");
-    
+
     Cat* copyCat = new Cat(*originalCat);
     copyCat->getBrain()->setIdea(0, "I am a cat copy");
 
@@ -35,7 +35,7 @@ int main() {
     delete originalCat;
     delete copyCat;
 
-    std::cout << "\n=== Testing array of Animals ===" << std::endl;
+    std::cout << BLUE << "\n=== Testing array of Animals ===" << RESET << std::endl;
     const int arraySize = 6;
     Animal* animals[arraySize];
 
@@ -45,13 +45,13 @@ int main() {
         animals[i + arraySize / 2] = new Cat();
     }
 
-    std::cout << "\n=== Testing polymorphism ===" << std::endl;
+    std::cout << BLUE << "\n=== Testing polymorphism ===" << RESET << std::endl;
     for (int i = 0; i < arraySize; i++) {
         std::cout << "Animal " << i << " (" << animals[i]->getType() << "): ";
         animals[i]->makeSound();
     }
 
-    std::cout << "\n=== Deleting animals ===" << std::endl;
+    std::cout << RED << "\n=== Deleting animals ===" << RESET << std::endl;
     for (int i = 0; i < arraySize; i++) {
         delete animals[i];
     }
