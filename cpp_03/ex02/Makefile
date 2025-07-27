@@ -6,7 +6,7 @@
 #    By: reldahli <reldahli@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/25 16:04:27 by reldahli          #+#    #+#              #
-#    Updated: 2025/07/26 21:46:47 by reldahli         ###   ########.fr        #
+#    Updated: 2025/07/27 02:27:50 by reldahli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ RESET	= \033[0m
 
 # Target to compile the program
 $(NAME): $(OBJS)
-	@echo "$(GREEN)Compiling $(NAME)...$(RESET)"
+	@echo "$(YELLOW)Compiling $(NAME)...$(RESET)"
 	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
 	@echo "$(GREEN)$(NAME) Compilation successful!$(RESET)"
 
