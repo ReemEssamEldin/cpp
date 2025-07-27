@@ -5,10 +5,11 @@
 #                                                     +:+ +:+         +:+      #
 #    By: reldahli <reldahli@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/07/25 16:04:27 by reldahli          #+#    #+#              #
-#    Updated: 2025/07/27 02:27:50 by reldahli         ###   ########.fr        #
+#    Created: 2025/07/27 02:45:04 by reldahli          #+#    #+#              #
+#    Updated: 2025/07/27 02:45:06 by reldahli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 # Standard
 NAME		= fragtrap

@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: reldahli <reldahli@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/26 23:47:01 by reldahli          #+#    #+#             */
-/*   Updated: 2025/07/26 23:47:03 by reldahli         ###   ########.fr       */
+/*   Created: 2025/07/27 02:43:57 by reldahli          #+#    #+#             */
+/*   Updated: 2025/07/27 02:44:00 by reldahli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef SCAVTRAP_HPP
 #define SCAVTRAP_HPP
